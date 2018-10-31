@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        //Aqui se define la variable de la sumatoria
+        let sumatoria=0;
+
+        //En este ciclo for, se intenta sumar con los numero de 0 a 999
+        for (let i = 0; i < 1000; i++) {
+            //Mediante el if, se define si son multiplos de 3 o 5
+            if(i%3==0 || i%5==0){
+                sumatoria+=i;
+            }
+        }
+        
+        document.write("La suma de todos los multiplos de 3 o 5 abajo de 1000 es: "+sumatoria);
+
+    </script>
+</body>
+</html>

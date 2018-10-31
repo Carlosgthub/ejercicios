@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+
+    //Es una funcion que se manda a llamar pidiendo como parametro un numero
+    function obtenerPrimo(n) {
+        //Aqui se define el arreglo
+        let primos = [2, 3, 5];
+        
+        //En esta funcion se define si cada elemento del arreglo es primo o no
+        const esPrimo = num => {
+            for (let i = 0; i < primos.length; i++) {
+                if (num == primos[i]) {
+                    return true;
+                }
+                if (num % primos[i] == 0){
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        //Aqui se agregan los numeros al arreglo conforme se van validando si es primo cada numero generado en el for
+        for (var i = 3; primos.length < n; i++)
+            if (esPrimo(i) && primos.indexOf(i) == -1) {
+                primos.push(i);
+            }
+
+        //Aqui se retorna el arreglo con los numeros primos
+        return primos.pop();
+    };
+
+
+    document.write("El numero primo 10 001 es: "+obtenerPrimo(10001));
+
+    </script>
+</body>
+</html>
